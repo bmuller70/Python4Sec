@@ -2,7 +2,7 @@
 import json,bcrypt,cryptography
 import Gerador_senha
 
-
+#Para cadastro de novo usuario deve ser criado o Json com "senhas": []
 
 class Gerenciador():
     def __init__(self):
@@ -11,12 +11,7 @@ class Gerenciador():
             try:
                 self.lista = json.load(j_son)
             except json.decoder.JSONDecodeError as erro:
-                if erro == "Expecting value: line 1 column 1 (char 0)":
-                    print('isso ai')
-                else:
-                    print(erro)
-            # raise
-            # self.lista = {}
+               print(f"O json apresenta o seguinte erro:\n {erro}")
 
     def criar(self):
         creds = {'nome': '', 'login': ''}
@@ -26,6 +21,13 @@ class Gerenciador():
         creds['senha'] = self.senha
         return creds
 
+    def alterar(self, nome):
+        index = [i["nome"] for i in self.lista["senhas"]]
+        print(index.index(nome))
+        #terminar a função de alteração
+
+    #def remover(self):
+
     def salvar(self, creds):
         self.lista["senhas"].append(creds)
         create = open('pass.json', 'w')
@@ -33,20 +35,14 @@ class Gerenciador():
 
 
 
-    def alterar(self):
-        try:
-            print(self.escrita)
-        except:
-            pass
-    #def remover(self):
-
 # -----------------------------------------
 # Teste para criação das senhas
 teste = Gerenciador()
 #cadastro = teste.criar()
-#teste.alterar()
-creds = teste.criar()
-teste.salvar(creds)
+teste.alterar('amazon')
+#teste.index()
+#creds = teste.criar()
+#teste.salvar(creds)
 #print(teste.alterar())
 #-----------------------------------------
 
