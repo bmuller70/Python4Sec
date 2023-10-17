@@ -1,19 +1,29 @@
 {
     "senhas": [
         {
-            "nome": "teste",
-            "login": "teste",
-            "senha": "4A+Fi!=SnE_]LK"
+            "nome": "teste2",
+            "login": "meu email",
+            "senha": "09878"
         },
         {
-            "nome": "amazon",
-            "login": "google",
-            "senha": "tK<@W0tX3n8bK'"
+            "nome": "novo nome",
+            "login": "qualquer@coisa.com",
+            "senha": "1234"
         },
         {
             "nome": "youtube",
             "login": "login",
             "senha": ".=-vLsy509Q6H9"
+        },
+        {
+            "nome": "novo teste",
+            "login": "local",
+            "senha": "AVC/q/<j5WY2+8"
+        },
+        {
+            "nome": "novo teste2",
+            "login": "de novo",
+            "senha": "W[-4%62w#q9Z*p"
         }
     ]
 }
